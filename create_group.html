@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="bootstrap-css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/creategroup.css">
+        <title>Project</title>
+    </head>
+    <body>
+
+      <div class="jumbotron" id="top">
+        <div class="dropdown" id="profile">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Your Profile
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#" id="home">Home</a>
+              <a class="dropdown-item" href="#" id="view">View</a>
+              <a class="dropdown-item" href="#" id="edit">Edit</a>
+              <a class="dropdown-item" href="#" id="register">Regitser</a>
+              <a class="dropdown-item" href="#" id="marks">Marks</a>
+              <a class="dropdown-item" href="index.html">Logout</a>
+            </div>
+        </div>
+      </div>
+
+      <div class="container" id="thing">
+        <h2>Create your group...</h2>
+        <div class="jumbotron">
+
+            <form>
+ 
+                <!-- TITLE -->
+
+                <div class="form-group row" id="form1">
+                   <label for="title" class="col-4 col-form-label">Title</label>
+                   <div class="col-8">
+                   <input type="text" class="form-control" name="title" placeholder="Title" required>
+                   </div> 
+               </div>
+
+                <!-- DESCRIPTION -->
+
+                <div class="form-group row" id="form2">
+                    <label for="description" class="col-4 col-form-label">Description</label>
+                    <div class="col-8">
+                    <textarea class="form-control" id="description" placeholder="Description" required></textarea>
+                    </div> 
+                </div>
+
+                 <!-- TAG -->
+
+                 <div class="form-group row" id="form3">
+                    <label for="tags" class="col-4 col-form-label">Tags</label>
+                    <div class="col-8">
+                    <input type="text" class="form-control" name="tags" placeholder="Tags" required>
+                    </div> 
+                </div>
+
+                 <!-- STUDENT ID -->
+
+                 <div class="studentids">
+                 <div class="form-group row" id="form4">
+                    <label for="studentid" class="col-4 col-form-label">Student ID</label>
+                    <div class="col-8">
+                    <input type="text" class="form-control" name="studentid1" placeholder="Student ID">
+                    </div> 
+                </div>
+                </div>
+
+                 <button type="button" class="btn btn-primary" id="add">Add Student ID</button>
+
+                  <!-- MEMBERS -->
+
+                <div class="form-group row" id="form5">
+                    <label for="members" class="col-4 col-form-label">Do you need more members?</label>
+                    <div class="col-8">
+                    <input type="text" class="form-control" name="members" placeholder="Yes or No" required>
+                    <div class="alert alert-danger" role="alert" id="client">Enter a choice from the options.</div>
+                    </div> 
+                </div>
+
+                 <!-- GROUP ID -->
+
+                <div class="form-group row" id="form6">
+                    <label for="groupid" class="col-2 col-form-label">Group ID</label>
+                    <button class="btn btn-success col-2" type="button" id="generate">Generate Group ID</button>
+                    <div class="col-8">
+                    <input type="text" class="form-control" name="groupid" placeholder="Group ID" disabled required>
+                    </div> 
+                </div>
+
+                 <button type="submit" class="btn btn-outline-dark" id="submit">Create group</button>
+
+
+      <script src="bootstrap-js/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="bootstrap-js/bootstrap.min.js"></script>
+        <script src="js/create_group.js"></script>
+    </body>
+</html>

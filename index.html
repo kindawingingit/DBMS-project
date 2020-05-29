@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="bootstrap-css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/index.css">
+        <title>Project</title>
+    </head>
+    <body>
+        <ul class="nav nav-tabs" id="navtabs">
+            <li class="active"><a class="nav-link" data-toggle="tab" href="#facultytab">Faculty</a></li>
+            <li><a class="nav-link" data-toggle="tab" href="#studenttab">Student</a></li>
+        </ul>
+            
+        <div class="container jumbotron" id="thing">
+            <h1>Please Sign in</h1>
+            <!-- FORM -->
+                
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="facultytab">
+                    <form id="faculty">
+                        <div class="form-group row" id="form1">
+                            <label for="school" class="col-2 col-form-label">School</label>
+                            <div class="col-6">
+                            <input list="schools" name="school" class="form-control" required placeholder="School">
+                            <datalist id="schools">
+                                <option value="SAS">School of Advanced Sciences</option>
+                                <option value="SCOPE">School of Computer Science and Engineering</option>
+                                <option value="SCE">School of Civil Engineering</option>
+                                <option value="SENSES">School of Electronics Engineering</option>
+                            </datalist>
+                            <div class="alert alert-danger" role="alert" id="client">Enter a choice from the options.</div>
+                            </div>
+                        </div>
+
+                            <!-- FACULTY ID -->
+
+                        <div class="form-group row" id="form2">
+                            <label for="facultyid" class="col-2 col-form-label">Faculty ID</label>
+                            <div class="col-6">
+                            <input type="text" class="form-control" name="facultyid" placeholder="Faculty ID">
+                            </div> 
+                        </div>
+
+                            <!-- PASSWORD -->
+
+                        <div class="form-group row" id="form3">
+                            <label for="password" class="col-2 col-form-label">Password</label>
+                            <div class="col-6">
+                            <input type="password" class="form-control" name="password" placeholder="Password">
+                            </div>
+                        </div>
+
+                            <!-- VALIDATION -->
+
+                        <div class="row" id="server">
+                            <div class="alert alert-danger col-6">Faculty ID or password is incorrect.</div>
+                            <div class="alert alert-primary col-7">If you do not have an account. Then create an account.</div>
+                        </div>
+
+                            <!-- SUBMIT AND CREATE BUTTONS -->
+
+                        <button type="submit" class="btn btn-outline-dark" id="submit">Sign in</button>
+                        <a class="btn btn-outline-primary" id="create" href="create.html">Create an account</a>
+
+                    </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="studenttab">
+                        <form id="student">
+
+                             <!-- STUDENT ID -->
+
+                            <div class="form-group row" id="form4">
+                                <label for="studentid" class="col-2 col-form-label">Student ID</label>
+                                <div class="col-6">
+                                <input type="text" class="form-control" name="studentid" placeholder="Student ID">
+                                </div> 
+                            </div>
+
+                             <!-- PASSWORD -->
+
+                            <div class="form-group row" id="form5">
+                                <label for="studentpassword" class="col-2 col-form-label">Password</label>
+                                <div class="col-6">
+                                <input type="password" class="form-control" name="studentpassword" placeholder="Password">
+                                </div> 
+                            </div>
+
+                             <!-- VALIDATION -->
+
+                            <div class="row" id="server2">
+                                <div class="alert alert-danger col-6">Student ID or password is incorrect.</div>
+                                <div class="alert alert-primary col-7">If you do not have an account. Then create an account.</div>
+                            </div>
+
+                             <!-- SUBMIT AND CREATE BUTTONS -->
+
+                            <button type="submit" class="btn btn-outline-dark" id="submit2">Sign in</button>
+                            <a class="btn btn-outline-primary" id="create2" href="create3.html">Create an account</a>
+
+                        </form>
+                    </div>
+                </div>
+        </div>
+        <script src="bootstrap-js/jquery.js"></script>
+        <script src="bootstrap-js/bootstrap.min.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

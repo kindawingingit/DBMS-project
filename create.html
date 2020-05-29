@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="bootstrap-css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/create.css">
+        <title>Project</title>
+    </head>
+    <body>
+        <div class="container" id="thing">
+            <div class="row">
+                <h2>Create your account here!</h2>
+            </div>
+
+            <!-- OUR FORM -->
+
+            <div class="jumbotron jumbotron-primary">
+                <div class="row">
+                <h5 id="head">Please fill in all the details</h5>
+                </div>
+
+                <!-- SCHOOL -->
+
+                <form>
+
+                <div class="form-group row">
+                    <label for="school" class="col-5 col-form-label">School</label>
+                    <div class="col-6">
+                    <input list="schools" name="school" class="form-control" placeholder="School" required>
+                    <datalist id="schools">
+                        <option value="SAS">School of Advanced Sciences</option>
+                        <option value="SCOPE">School of Computer Science and Engineering</option>
+                        <option value="SCE">School of Civil Engineering</option>
+                        <option value="SENSES">School of Electronics Engineering</option>
+                    </datalist>
+                    <div class="alert alert-danger" role="alert" id="client">Enter a choice from the options.</div>
+                    </div>
+                </div>
+
+                <!-- FACULTY NAME -->
+
+                <div class="form-group row" id="form1">
+                    <label for="facultyname" class="col-5 col-form-label">Faculty Name</label>
+                    <div class="col-6">
+                    <input type="text" class="form-control" name="facultyname" placeholder="Name" required>
+                    </div> 
+                </div>
+
+                <!-- FACULTY ID -->
+
+                <div class="form-group row" id="form1">
+                    <label for="facultyid" class="col-5 col-form-label">Faculty ID</label>
+                    <div class="col-6">
+                    <input type="text" class="form-control" name="facultyid" placeholder="ID" required>
+                    <div class="alert alert-danger" id="server">Faculty ID already exists.</div> 
+                    </div>
+                </div>
+
+                <!-- PASSWORD -->
+
+                <div class="form-group row" id="form2">
+                    <label for="password" class="col-5 col-form-label">Password</label>
+                    <div class="col-6">
+                    <input type="password" class="form-control" name="password" placeholder="Password" required>
+                    <div class="alert alert-danger" role="alert" id="client2">Passwords do not match.</div>
+                    </div>
+                </div>
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="form-group row" id="form2">
+                    <label for="confirmpassword" class="col-5 col-form-label">Confirm Password</label>
+                    <div class="col-6">
+                    <input type="password" class="form-control" name="confirmpassword" placeholder="Password" required>
+                    </div>
+                </div>
+
+                <!-- SUBMIT BUTTON -->
+
+                <div class="row">
+                    <button type="submit" class="btn btn-outline-primary" id="submit">Submit Details</button>
+                </div>
+
+                </form>
+            </div>
+        </div>
+        </div>
+        <script src="bootstrap-js/jquery.js"></script>
+        <script src="bootstrap-js/bootstrap.min.js"></script>
+        <script src="js/create.js"></script>
+    </body>
+</html>

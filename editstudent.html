@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="bootstrap-css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/editstudent.css">
+        <title>Project</title>
+    </head>
+    <body>
+        <div class="jumbotron" id="top">
+            <div class="dropdown" id="profile">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Your Profile
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#" id="home">Home</a>
+                  <a class="dropdown-item" href="#" id="view">View</a>
+                  <a class="dropdown-item" href="index.html">Logout</a>
+                </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="jumbotron">
+
+              <form>
+
+               <!-- COURSE ID -->
+
+               <div class="form-group row" id="form2">
+                  <label for="courseid" class="col-4 col-form-label">Course ID</label>
+                  <div class="col-8">
+                  <input type="text" class="form-control" name="courseid" placeholder="Course ID" required>
+                  </div> 
+              </div>
+
+               <!-- SKILLS -->
+
+               <div class="form-group row" id="form5">
+                  <label for="skills" class="col-4 col-form-label">Skills</label>
+                  <div class="col-8">
+                  <input type="text" class="form-control" name="skills" placeholder="Skills" required >
+                  </div> 
+              </div>
+
+              <!-- BUTTONS -->
+
+              <div class="row" id="buttons">
+                  <div class="custom-control custom-checkbox border border-primary rounded" id="more">
+                      <p class="text-muted">Please select this option to update more courses</p>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="defaultCheck1">
+                          <label class="form-check-label" for="defaultCheck1">
+                           More courses
+                          </label>
+                        </div>
+                  </div>
+                  <button type="submit" class="btn btn-outline-primary" id="submit">Update Details</button>
+              </div>
+
+              <div class="alert alert-success col-5" id="success">Saved your response.</div>
+
+              </form>
+
+          </div>
+          </div>
+
+        <script src="bootstrap-js/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="bootstrap-js/bootstrap.min.js"></script>
+        <script src="js/editstudent.js"></script>
+    </body>
+</html>

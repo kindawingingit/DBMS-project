@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="bootstrap-css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/add_faculty.css">
+        <title>Project</title>
+    </head>
+    <body>
+
+      <div class="jumbotron" id="top">
+        <div class="dropdown" id="profile">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Your Profile
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#" id="home">Home</a>
+                <a class="dropdown-item" href="#" id="add">Add Courses</a>
+                <a class="dropdown-item" href="index.html">Logout</a>
+            </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <form>
+ 
+            <!-- COURSE ID -->
+
+            <div class="form-group row" id="form2">
+               <label for="courseid" class="col-4 col-form-label">Course ID</label>
+               <div class="col-8">
+               <input type="text" class="form-control" name="courseid" placeholder="Course ID" required>
+               </div> 
+           </div>
+
+            <!-- SLOT -->
+
+            <div class="form-group row" id="form3">
+               <label for="slot" class="col-4 col-form-label">Slot</label>
+               <div class="col-8">
+                   <input list="schools" name="slot" class="form-control" placeholder="Slot" required>
+                   <datalist id="schools">
+                       <option value="A1">A1</option>
+                       <option value="A2">A2</option>
+                       <option value="B1">B1</option>
+                       <option value="B2">B2</option>
+                       <option value="C1">C1</option>
+                       <option value="C2">C2</option>
+                       <option value="D1">D1</option>
+                       <option value="D2">D2</option>
+                       <option value="E1">E1</option>
+                       <option value="E2">E2</option>
+                       <option value="F1">F1</option>
+                       <option value="F2">F2</option>
+                       <option value="G1">G1</option>
+                       <option value="G2">G2</option>
+                   </datalist>
+                   <div class="alert alert-danger" role="alert" id="client">Enter a choice from the options.</div>
+                   </div> 
+           </div>
+
+            <!-- CLASSROOM NO -->
+
+            <div class="form-group row" id="form4">
+               <label for="classroom" class="col-2 col-form-label">Class Room No.</label>
+               <button class="btn btn-success col-2" id="generate" type="button">Generate</button>
+               <div class="col-8">
+               <input type="text" class="form-control" name="classroom" placeholder="Class Room No." required disabled>
+               </div> 
+           </div>
+
+           <button class="btn btn-success" type="submit" id="submit" >Submit</button>
+
+      </div>
+
+      <script src="bootstrap-js/jquery.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="bootstrap-js/bootstrap.min.js"></script>
+      <script src="js/add_faculty.js"></script>
+  </body>
+</html>

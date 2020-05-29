@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="bootstrap-css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/coursestudent.css">
+        <title>Project</title>
+    </head>
+    <body>
+
+      <div class="jumbotron" id="top">
+        <div class="dropdown" id="profile">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Your Profile
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#" id="home">Home</a>
+              <a class="dropdown-item" href="#" id="view">View</a>
+              <a class="dropdown-item" href="#" id="edit">Edit</a>
+              <a class="dropdown-item" href="#" id="register">Regitser</a>
+              <a class="dropdown-item" href="#" id="marks">Marks</a>
+              <a class="dropdown-item" href="index.html">Logout</a>
+            </div>
+        </div>
+      </div>
+
+      <div class="col-3" id="aside">
+        <ul class="list-group">
+          <li class="list-group-item btn btn-outline-primary" id="mygroup"><a class="btn" >Your Group</a></li>
+        </ul>
+      </div>
+
+      <div class="container" id="thing">
+        <div class="row">
+          <div class="col-10">
+            <div class="alert alert-warning alert-dismissible fade show" role="alert" id="creatediv">
+                If you wish to create a group.<a href="#" class="alert-link create" id="create">Click here.</a>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="col-5">
+        </div>
+
+        </div>
+
+        <script src="bootstrap-js/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="bootstrap-js/bootstrap.min.js"></script>
+        <script src="js/course_student.js"></script>
+    </body>
+</html>

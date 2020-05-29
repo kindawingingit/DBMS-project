@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="bootstrap-css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/startstudent.css">
+        <title>Project</title>
+    </head>
+    <body>
+
+      <div class="jumbotron" id="top">
+        <div class="dropdown" id="profile">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Your Profile
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#" id="view">View</a>
+              <a class="dropdown-item" href="#" id="edit">Edit</a>
+              <a class="dropdown-item" href="#" id="register">Register</a>
+              <a class="dropdown-item" href="#" id="marks">Marks</a>
+              <a class="dropdown-item" href="index.html">Logout</a>
+            </div>
+        </div>
+      </div>
+
+      <div class="container" id="thing">
+        <div class="row"><button class="btn btn-outline-primary" id="back">Back</button></div>
+        <div class="row">
+          <div class="col-4" id="school">
+            <h3>Course details</h3>
+            <ul class="list-group">
+              <li class="list-group-item btn btn-outline-primary" id="all"><a class="btn" >All courses</a></li>
+              <li class="list-group-item btn btn-outline-primary" id="sas"><a class="btn" >School of Advanced Sciences</a></li>
+              <li class="list-group-item btn btn-outline-primary" id="scope"><a class="btn" >School of Computer Science and Engineering</a></li>
+              <li class="list-group-item btn btn-outline-primary" id="sce"><a class="btn" >School of Civil Engineering</a></li>
+              <li class="list-group-item btn btn-outline-primary" id="senses"><a class="btn" >School of Electronics Engineering</a></li>
+            </ul>
+          </div>
+
+          <div class="col" id="default">
+            <ul class="list-group" id="center"><h3>Your courses</h3>
+              </ul>
+          </div>
+
+          <div class="col" id="faculty">
+            <ul class="list-group" id="right"><h3>Faculty Details</h3>
+                    <li class="list-group-item btn btn-outline-primary" id="all"><a class="btn" >All Schools</a></li>
+                    <li class="list-group-item btn btn-outline-primary" id="sas"><a class="btn" >School of Advanced Sciences</a></li>
+                    <li class="list-group-item btn btn-outline-primary" id="scope"><a class="btn" >School of Computer Science and Engineering</a></li>
+                    <li class="list-group-item btn btn-outline-primary" id="sce"><a class="btn" >School of Civil Engineering</a></li>
+                    <li class="list-group-item btn btn-outline-primary" id="senses"><a class="btn" >School of Electronics Engineering</a></li>
+            </ul>
+          </div>
+
+          <!-- INVISIBLE TABS -->
+
+          <div class="col" id="alltab">
+            <ul class="list-group"><h3>All courses</h3>
+              <table class="table table-striped table-dark table-hover table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col" >Course</th>
+                    <th scope="col" >CourseID</th>
+                    <th scope="col" >Credits</th>
+                  </tr>
+                </thead>
+                <tbody id="allcontent">
+                  </tbody>
+                  </table>
+            </ul>
+          </div>
+
+          <div class="col" id="sastab">
+            <ul class="list-group"><h3>School of Advanced Sciences courses</h3>
+              <table class="table table-striped table-dark table-hover table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col" >Course</th>
+                    <th scope="col" >CourseID</th>
+                    <th scope="col" >Credits</th>
+                  </tr>
+                </thead>
+                <tbody id="sascontent">
+                  </tbody>
+                  </table>
+            </ul>
+          </div>
+
+          <div class="col" id="scopetab">
+            <ul class="list-group"><h3>School of Computer Science and Engineering courses</h3>
+              <table class="table table-striped table-dark table-hover table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col" >Course</th>
+                    <th scope="col" >CourseID</th>
+                    <th scope="col" >Credits</th>
+                  </tr>
+                </thead>
+                <tbody id="scopecontent">
+                  </tbody>
+                  </table>
+            </ul>
+          </div>
+
+          <div class="col" id="scetab">
+            <ul class="list-group"><h3>School of Civil Engineering courses</h3>
+              <table class="table table-striped table-dark table-hover table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col" >Course</th>
+                    <th scope="col" >CourseID</th>
+                    <th scope="col" >Credits</th>
+                  </tr>
+                </thead>
+                <tbody id="scecontent">
+                  </tbody>
+                  </table>
+            </ul>
+          </div>
+
+          <div class="col" id="sensestab">
+            <ul class="list-group"><h3>School of Electronics Engineering courses</h3>
+              <table class="table table-striped table-dark table-hover table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col" >Course</th>
+                    <th scope="col" >CourseID</th>
+                    <th scope="col" >Credits</th>
+                  </tr>
+                </thead>
+                <tbody id="sensescontent">
+                  </tbody>
+                  </table>
+            </ul>
+          </div>
+
+          <div class="col" id="allfaculty">
+            <ul class="list-group"><h3>All Schools</h3>
+              <table class="table table-striped table-dark table-hover table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col" >Faculty</th>
+                    <th scope="col" >Faculty ID</th>
+                  </tr>
+                </thead>
+                <tbody id="allcontentfaculty">
+                  </tbody>
+                  </table>
+            </ul>
+          </div>
+
+          <div class="col" id="sasfaculty">
+            <ul class="list-group"><h3>School of Advanced Sciences courses</h3>
+              <table class="table table-striped table-dark table-hover table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col" >Faculty</th>
+                    <th scope="col" >Faculty ID</th>
+                  </tr>
+                </thead>
+                <tbody id="sascontentfaculty">
+                  </tbody>
+                  </table>
+            </ul>
+          </div>
+
+          <div class="col" id="scopefaculty">
+            <ul class="list-group"><h3>School of Computer Science and Engineering courses</h3>
+              <table class="table table-striped table-dark table-hover table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col" >Faculty</th>
+                    <th scope="col" >Faculty ID</th>
+                  </tr>
+                </thead>
+                <tbody id="scopecontentfaculty">
+                  </tbody>
+                  </table>
+            </ul>
+          </div>
+
+          <div class="col" id="scefaculty">
+            <ul class="list-group"><h3>School of Civil Engineering courses</h3>
+              <table class="table table-striped table-dark table-hover table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col" >Faculty</th>
+                    <th scope="col" >Faculty ID</th>
+                  </tr>
+                </thead>
+                <tbody id="scecontentfaculty">
+                  </tbody>
+                  </table>
+            </ul>
+          </div>
+
+          <div class="col" id="sensesfaculty">
+            <ul class="list-group"><h3>School of Electronics Engineering courses</h3>
+              <table class="table table-striped table-dark table-hover table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col" >Faculty</th>
+                    <th scope="col" >Faculty ID</th>
+                  </tr>
+                </thead>
+                <tbody id="sensescontentfaculty">
+                  </tbody>
+                  </table>
+            </ul>
+          </div>
+          
+        </div>
+
+        <script src="bootstrap-js/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="bootstrap-js/bootstrap.min.js"></script>
+        <script src="js/start_student.js"></script>
+    </body>
+</html>

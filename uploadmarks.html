@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="bootstrap-css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/uploadmarks.css">
+        <title>Project</title>
+    </head>
+    <body>
+
+      <div class="jumbotron" id="top">
+        <div class="dropdown" id="profile">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Your Profile
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#" id="home">Home</a>
+                <a class="dropdown-item" href="#" id="add">Add Courses</a>
+              <a class="dropdown-item" href="index.html">Logout</a>
+            </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <form>
+ 
+            <!-- REVIEW - 1 -->
+
+            <div class="form-group row" id="form1">
+               <label for="review1" class="col-4 col-form-label">Review - 1</label>
+               <div class="col-8">
+               <input type="text" class="form-control" name="review1" required>
+               </div> 
+           </div>
+
+           <!-- REVIEW - 2 -->
+
+           <div class="form-group row" id="form2">
+            <label for="review2" class="col-4 col-form-label">Review - 2</label>
+            <div class="col-8">
+            <input type="text" class="form-control" name="review2" required>
+            </div> 
+            </div>
+
+            <!-- REVIEW - 3 -->
+
+            <div class="form-group row" id="form3">
+                <label for="review3" class="col-4 col-form-label">Review - 3</label>
+                <div class="col-8">
+                <input type="text" class="form-control" name="review3" required>
+                </div> 
+            </div>
+
+            <button type="submit" class="btn btn-success">Upload Marks</button>
+
+            </form>
+
+        </div>
+
+      </div>
+
+      <script src="bootstrap-js/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="bootstrap-js/bootstrap.min.js"></script>
+        <script src="js/uploadmarks.js"></script>
+    </body>
+</html>

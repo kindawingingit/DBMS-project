@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="bootstrap-css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/viewmarks.css">
+        <title>Project</title>
+    </head>
+    <body>
+
+      <div class="jumbotron" id="top">
+        <div class="dropdown" id="profile">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Your Profile
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#" id="home">Home</a>
+                <a class="dropdown-item" href="#" id="add">Add Courses</a>
+              <a class="dropdown-item" href="index.html">Logout</a>
+            </div>
+        </div>
+      </div>
+
+      <div class="container">
+          <div class="row"><button class="btn btn-outline-primary" id="back">Back</button></div>
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Group ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Review 1</th>
+                <th scope="col">Review 2</th>
+                <th scope="col">Review 3</th>
+              </tr>
+            </thead>
+            <tbody id="table"></tbody>
+            </table>
+      </div>
+
+      <script src="bootstrap-js/jquery.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="bootstrap-js/bootstrap.min.js"></script>
+      <script src="js/viewmarks.js"></script>
+  </body>
+</html>
