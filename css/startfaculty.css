@@ -1,0 +1,7 @@
+#profile{
+    float: right;
+}
+
+#alltab, #sastab, #scopetab, #scetab, #sensestab, #allfaculty, #sasfaculty, #scopefaculty, #scefaculty, #sensesfaculty, #back {
+    display: none;
+}

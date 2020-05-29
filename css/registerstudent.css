@@ -1,0 +1,23 @@
+#profile{
+    float: right;
+}
+
+#client1, #client2 {
+    display: none;
+}
+
+#buttons {
+    position: relative;
+    left: 550px;
+}
+
+#more {
+    position: relative;
+    right: 10px;
+    padding-right: 10px;
+}
+
+#checky {
+    position: relative;
+    left: 350px;
+}

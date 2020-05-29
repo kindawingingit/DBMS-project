@@ -1,0 +1,22 @@
+#thing {
+    position: relative;
+    top: 150px;
+    left: 100px;
+}
+
+#submit {
+    position: relative;
+    left: 800px;
+}
+
+#client {
+    display: none;
+}
+
+#client2 {
+    display: none;
+}
+
+#server {
+    display: none;
+}

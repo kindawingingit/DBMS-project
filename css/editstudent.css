@@ -1,0 +1,30 @@
+#profile{
+    float: right;
+}
+
+#buttons {
+    position: relative;
+    left: 560px;
+}
+
+#more {
+    position: relative;
+    right: 10px;
+    padding-right: 10px;
+}
+
+#checky {
+    position: relative;
+    left: 250px;
+}
+
+#lab {
+    position: relative;
+    right: 10px ;
+}
+
+#success {
+    position: relative;
+    left: 400px;
+    display: none;
+}

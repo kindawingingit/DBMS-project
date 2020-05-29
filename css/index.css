@@ -1,0 +1,79 @@
+#navtabs{
+    width: 500px;
+    position: relative;
+    top: 170px;
+    left: 400px;
+}
+
+#thing {
+    position: relative;
+    top: 170px;
+    height: 500px;
+    padding-left: 300px;
+}
+
+#client {
+    display: none;
+}
+
+#form1 {
+    position: relative;
+    top: 20px;
+}
+
+#form2 {
+    position: relative;
+    top: 20px;
+}
+
+#form3{
+    position: relative;
+    top: 20px;
+}
+
+#server {
+    display: none;
+    position: relative;
+    top: 20px;
+    left: 160px;
+}
+
+#submit {
+    position: relative;
+    top: 20px;
+    left: 300px;
+}
+
+#create {
+    position: relative;
+    top: 20px;
+    left: 300px;
+}
+
+#form4{
+    position: relative;
+    top: 50px;
+}
+
+#form5{
+    position: relative;
+    top: 50px;
+}
+
+#server2 {
+    display: none;
+    position: relative;
+    top: 50px;
+}
+
+#submit2 {
+    position: relative;
+    top: 50px;
+    left: 300px;
+}
+
+#create2 {
+    position: relative;
+    top: 50px;
+    left: 300px;
+}

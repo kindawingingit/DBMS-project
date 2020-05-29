@@ -1,0 +1,15 @@
+#profile{
+    float: right;
+}
+
+#aside{
+    float: left;
+}
+
+#submit{
+    float: right;
+}
+
+#client {
+    display: none;
+}
