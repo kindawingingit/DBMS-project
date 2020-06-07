@@ -53,11 +53,11 @@ $(document).ready(function() {
         };
     }
     else{
-        if(cid.includes("scope"))
+        if(cid.includes("scope") || cid.includes("SCOPE"))
         school = "scope";
-        else if(cid.includes("sce"))
+        else if(cid.includes("sce") || cid.includes("SCOPE"))
         school = "sce";
-        else if(cid.includes("senses"))
+        else if(cid.includes("senses") || cid.includes("SCOPE"))
         school = "senses";
         else
         school = "sas";
@@ -74,8 +74,9 @@ $(document).ready(function() {
         data     : formData2,
         datatype : 'text'
     }).done(function(response){
-        alert(response);
+        console.log(response);
         response = jQuery.parseJSON(response);
+        var groupid = response[0][0];
         $("#groupid").text(response[0][0]);
         $("#title").text(response[0][1]);
         $("#description").text(response[0][2]);
@@ -83,7 +84,6 @@ $(document).ready(function() {
         $("#members").text(response[0][4]);
 
         var groupid = response[0][0];
-        alert(groupid);
         var formData = {
             'groupid' : response[0][0],
             'school'  : school
@@ -165,6 +165,11 @@ $(document).ready(function() {
                                                 )
                                     );
             }
+            $(".profile").click(function(){
+                let sid2 = this.id;
+                window.location.replace("viewstudent.html?studentid="+sid+"&search="+sid2);
+            });
+
             $(".btn-success").click(function(event){
                 event.preventDefault();
                 let sid = this.id;
@@ -296,6 +301,43 @@ $(document).ready(function() {
     
         });
 
+    });
+
+    $("#upload").submit(function(event){
+        event.preventDefault();
+        let link = $("input[name=link]").val();
+        formData6 = {
+            'link' : link,
+            'studentid' : sid,
+            'courseid' : cid,
+            'school' : school
+        };
+        
+        $.ajax({
+            type : 'POST',
+            url : 'php/uploadlink.php',
+            data : formData6,
+            datatype : 'text'
+        }).done(function(response){
+            if(response === "Successfull")
+            $("input[name=link]").val("");
+        })
+    });
+
+    $("#report").submit(function(event){
+        event.preventDefault();
+        $.ajax({
+            url : 'php/uploadreport.php',
+            cache : false,
+            contentType : false,
+            processData : false,
+            data : new FormData(this),
+            type : 'POST',
+            success: function(respone){
+                if(respone === "Successfull")
+                $("input[name=file]").val("");
+            }
+        });
     });
 
 });

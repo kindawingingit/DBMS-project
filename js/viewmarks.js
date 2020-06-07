@@ -46,8 +46,20 @@ $(document).ready(function() {
         data : formData,
         datatype : 'text'
     }).done(function(response){
+        console.log(response);
         let groups = $.parseJSON(response);
+        let avgclass = 0;
+        let i = 0;
+        let pass = 0;
+        let fail = 0;
         for(let group in groups){
+            let total = (parseInt(groups[group][2])/5) + (parseInt(groups[group][3])*(0.3)) + (parseInt(groups[group][4])*0.5);
+            avgclass += total;
+            i++;
+            if(total > 50)
+            pass++;
+            else
+            fail++;
             $("#table").append(
                 $("<tr />")
                           .append(
@@ -70,8 +82,16 @@ $(document).ready(function() {
                             $("<td />")
                                       .text(groups[group][4])
                           )
+                          .append(
+                            $("<td />")
+                                      .text(total)
+                          )
             );
         }
+        avgclass = avgclass / i;
+        $("#average").text("Average Marks : "+avgclass);
+        $("#pass").text("No. of students passed: "+pass);
+        $("#fail").text("No. of students failed: "+fail);
     });
 
 });

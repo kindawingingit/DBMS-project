@@ -67,7 +67,7 @@
              window.location.replace("start_student.html?studentid="+sid);
              if(mssg == "Failed")
              {
-                $("#server").css('display', 'block');
+                $("#server2").css('display', 'block');
                 setTimeout(function(){
                     $("#server2").css('display', 'none');
                 }, 2010);

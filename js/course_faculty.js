@@ -66,8 +66,9 @@ $(document).ready(function() {
                 data : formData2,
                 datatype : 'text'
             }).done(function(response){
+                console.log(response);
                 let project = $.parseJSON(response);
-                console.log(project)
+                console.log(typeof(project[0][5]));
                 $("#thing").append(
                     $("<div />")
                                 .attr("class", "row")
@@ -102,6 +103,16 @@ $(document).ready(function() {
                                                                                 )
                                                                                 .append(
                                                                                     $("<div />")
+                                                                                                .html('<a href="'+project[0][5]+'">Github Link</a>')
+                                                                                )
+                                                                                .append(
+                                                                                    $("<button />")
+                                                                                                   .attr("class", "btn btn-success download")
+                                                                                                   .text("Download Project Report")
+                                                                                                   .attr("id", project[0][0])
+                                                                                )
+                                                                                .append(
+                                                                                    $("<div />")
                                                                                                 .attr("class", "card-footer")
                                                                                                 .attr("id", "tags")
                                                                                                 .append(
@@ -123,6 +134,28 @@ $(document).ready(function() {
                     let groupid = this.id;
                     window.location.replace("uploadmarks.html?facultyid="+fid+"&groupid="+groupid+"&school="+school+"&classroom="+classroom);
                 });
+
+                $(".download").click(function(event){
+                    event.preventDefault();
+                    let groupid = this.id;
+                    let file_url = "php/Uploads/"+groupid+".docx";
+                    $.ajax({
+                        url : file_url,
+                        method : 'GET',
+                        xhrFields : {
+                            responseType : 'blob'
+                        },
+                        success : function(data){
+                            var a = document.createElement('a');
+                            var url = window.URL.createObjectURL(data);
+                            a.href = url;
+                            a.download = groupid+" Project Report";
+                            a.click();
+                            a.remove();
+                            window.URL.revokeObjectURL(url);
+                        }
+                    });
+                })
 
 
                 let tags = project[0][3].split(",");

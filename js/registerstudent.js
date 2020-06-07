@@ -102,6 +102,7 @@
                 data     : formData,
                 datatype : "text"
             }).done(function(response){
+                console.log(response);
                 if(response == "Succesfull")
                 {
                     if(document.getElementById("defaultCheck1").checked)
@@ -109,6 +110,9 @@
                 }
                 else
                 alert(response);
+
+                
+
             });
 
             var formData2 = {
@@ -123,8 +127,10 @@
                 data     : formData2,
                 datatype : 'text'
             });
+            
         }
 
+        
         if(ctr == 1)
         {
             window.location.replace("register_student.html?studentid="+sid);

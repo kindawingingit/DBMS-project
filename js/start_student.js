@@ -177,6 +177,7 @@
         data : formData,
         datatype : "text"
     }).done(function(response){
+        console.log(response);
         var courses = jQuery.parseJSON(response);
         for( var course in courses){
             $("#center").append(

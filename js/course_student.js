@@ -49,11 +49,11 @@ $(document).ready(function() {
     var cid = getUrlParameter('courseid');
     var school;
 
-    if(cid.includes("scope"))
+    if(cid.includes("scope") || cid.includes("SCOPE"))
     school = "scope";
-    else if(cid.includes("sce"))
+    else if(cid.includes("sce") || cid.includes("SCE"))
     school = "sce";
-    else if(cid.includes("senses"))
+    else if(cid.includes("senses") || cid.includes("SENSES"))
     school = "senses";
     else
     school = "sas";
@@ -78,8 +78,10 @@ $(document).ready(function() {
         data : formData,
         datatype : 'text'
     }).done(function(response){
+        console.log(response);
         response = jQuery.parseJSON(response);
         let classroom = response[0][0];
+        console.log(classroom);
         var formData2 = {
             'studentid' : sid,
             'classroom' : classroom,
@@ -88,7 +90,6 @@ $(document).ready(function() {
         };
 
         if(response[0][1] == "" && response != null){
-        
             $(".create").attr("id", classroom);
         }
         else{
@@ -192,7 +193,7 @@ $(document).ready(function() {
                                             )
                             )
             );
-            let tags = projects[project][2].split(",");
+            let tags = projects[project][3].split(",");
             for(var i = 0; i<tags.length; i++){
                 $("#tags").append(
                     $("<span />")
@@ -212,6 +213,7 @@ $(document).ready(function() {
                  data : formData3,
                  datatype : 'text'  
              }).done(function(response){
+                 console.log(response);
                  let sid = getUrlParameter("studentid");
                 response = $.parseJSON(response);
                 let studentids = response; 

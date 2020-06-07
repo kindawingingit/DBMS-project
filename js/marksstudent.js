@@ -84,11 +84,11 @@ $(document).ready(function() {
             );
 
             var school;
-            if(cid.includes("scope"))
+            if(cid.includes("scope") || cid.includes("SCOPE"))
                 school = "scope";
-            else if(cid.includes("sce"))
+            else if(cid.includes("sce") || cid.includes("SCE"))
                 school = "sce";
-            else if(cid.includes("senses"))
+            else if(cid.includes("senses") || cid.includes("SENSES"))
                 school = "senses";
             else
                 school = "sas";
@@ -107,6 +107,7 @@ $(document).ready(function() {
             }).done(function(response){
                 if(response !== "Not found")
                 {
+                    console.log(response);
                     response = $.parseJSON(response);
 
                     $("#"+cid).append(

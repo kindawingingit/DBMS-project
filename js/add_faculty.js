@@ -15,7 +15,12 @@ $(document).ready(function() {
         }
     };
 
-    
+    var fid = getUrlParameter('facultyid');
+    var school = getUrlParameter('school');
+
+    $("#home").click(function(){
+        window.location.replace("start_faculty.html?facultyid="+fid+"&school="+school);
+    })
 
     $("#generate").click(function(event){
         event.preventDefault();

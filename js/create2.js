@@ -64,9 +64,9 @@
                 if(response == "Succesfull")
                 {
                     if(document.getElementById("defaultCheck1").checked)
-                    window.location.replace("create2.html?facultyid="+id+"&school="+school);
+                    window.location.replace("create2.html?facultyid="+fid+"&school="+school);
                     else
-                    window.location.replace("start_faculty.html");
+                    window.location.replace("index.html");
                 }
             });
         }
