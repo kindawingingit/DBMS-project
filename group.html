@@ -60,6 +60,28 @@
             </tbody>
         </table>
 
+        <form id="upload">
+        <div class="form-group row">
+            <label for="link" class="col-2 col-form-label">Github Link</label>
+            <div class="col-4">
+            <input type="text" class="form-control" name="link" required>
+            </div>
+            <button class="btn btn-success" >Upload</button> 
+        </div>
+        </form>
+        
+        <form id="report" enctype="multipart/form-data" action="uploadreport.php">
+        <div class="form-group row">
+            <label for="file" class="col-5 col-form-label">Upload Project Report <div class="text-muted">Please keep the name of your report your Group ID.</div></label>
+            <div class="col-4">
+                <input type="file" class="form-control" name="file" id="reportupload" required>
+            </div>
+            <button class="btn btn-success col-1">Upload</button>
+        </div>
+        
+        </form>
+
+
       </div>
 
       <script src="bootstrap-js/jquery.js"></script>
