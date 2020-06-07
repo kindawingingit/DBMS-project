@@ -8,8 +8,10 @@ function val($data)
     return $data;
 }
 
-$groupid = val($_POST['groupid']);
 $school = val($_POST['school']);
+$cid = val($_POST['courseid']);
+$sid = val($_POST['studentid']);
+$link = val($_POST['link']);
 
 $servername = "localhost";
 $username = "root";
@@ -21,18 +23,14 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if($conn->connect_error)
 die("Connection failed: " .$conn->connect_error);
 
-    $sql = "SELECT groupid, title, description, tags, members, github FROM ". $school ."_groups WHERE groupid = '$groupid'" ;
-    
-   
-    $result = $conn->query($sql);
+    $sql = "UPDATE ". $school ."_groups SET  github = '$link' WHERE groupid like '%{$cid}%' and groupid like '%{$sid}%'  ";
 
-        if($result->num_rows > 0)
+        if($conn->query($sql))
             {
-                $row = $result->fetch_all();
-                echo json_encode($row);
+                echo "Successfull";
 
             }
         else
-            echo "Query: ". $sql . " Error: ". $conn->error;
+            echo "Query : ". $sql ." Error : ". $conn->error;
         $conn->close();
 ?>

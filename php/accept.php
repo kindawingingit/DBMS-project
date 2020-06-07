@@ -23,7 +23,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if($conn->connect_error)
 die("Connection failed: " .$conn->connect_error);
 
-    $sql = "DELETE FROM ". $school ."_groups_applications WHERE groupid = '$groupid' AND applications = '$sid' ";
+    $sql = "DELETE FROM ". $school ."_groups_applications WHERE groupid like '%{$cid}%' AND applications = '$sid' ";
 
     if($conn->query($sql) === TRUE)
     {

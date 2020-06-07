@@ -21,7 +21,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if($conn->connect_error)
 die("Connection failed: " .$conn->connect_error);
 
-    $sql = "SELECT  groupid, title, review1, review2, review3 FROM ". $school ."_groups WHERE groupid = '%{$classroom}%' ";
+    $sql = "SELECT  groupid, title, review1, review2, review3 FROM ". $school ."_groups WHERE groupid like '%{$classroom}%' ";
     $result = $conn->query($sql);
 
         if($result->num_rows > 0)

@@ -28,7 +28,7 @@ $sql = "INSERT INTO students_profiles (studentid, courseid, skills)
 
 if($conn->query($sql) === TRUE)
 {
-    echo "Succesfull";
+    echo "Successfull";
 }
 else
       echo "Query: ". $sql. "Error: ". $conn->error;

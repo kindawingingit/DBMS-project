@@ -22,7 +22,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if($conn->connect_error)
 die("Connection failed: " .$conn->connect_error);
 
-    $sql = "SELECT groupid, title, description, tags, members, review1, review2, review3 FROM ". $school ."_groups WHERE groupid like '%{$cid}%' AND groupid LIKE '%{$sid}%' ";
+    $sql = "SELECT groupid, title, description, tags, members, review1, review2, review3 FROM ". $school ."_groups WHERE groupid LIKE '%{$cid}%' AND groupid LIKE '%{$sid}%' ";
     $result = $conn->query($sql);
 
         if($result->num_rows > 0)
@@ -32,6 +32,6 @@ die("Connection failed: " .$conn->connect_error);
 
             }
         else
-            echo "Not found";
+            echo "Query : ". $sql ."Error: ". $conn->error;
         $conn->close();
 ?>
